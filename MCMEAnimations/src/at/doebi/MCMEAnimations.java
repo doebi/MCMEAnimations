@@ -10,7 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class MCMEAnimations extends JavaPlugin {
 	
-	String[] Animators = {"HelmsDeep", "HelmsDeepPalast", "Edoras", "Bridge", "BreeWestSouth", "BreeNorth", "Moria", "Isengard", "GateBridgeVillage1", "GateBridgeVillage2", "Bagend", "Meduseld"};
+	String[] Animators = {"HelmsDeep", "HelmsDeepPalast", "Edoras", "Bridge", "BreeWestSouth", "BreeNorth", "Moria", "Isengard", "GateBridgeVillage1", "GateBridgeVillage2", "Bagend", "Meduseld", "LondDaer", "Orthanc", "BreeWindmill", "FornostMain", "FornostWing1", "FornostWing2"};
 	static Animator HelmsDeep = null;
 	static Animator HelmsDeepPalast = null;
 	static Animator Edoras = null;
@@ -29,6 +29,20 @@ public class MCMEAnimations extends JavaPlugin {
 	static Animator Bagshot2 = null;
 	static Animator Bagshot3 = null;
 	static Animator Meduseld = null;
+	static Animator LondDaer = null;
+	static Animator Orthanc = null;
+	static Animator BreeWindmill1 = null;
+	static Animator BreeWindmill2 = null;
+	static Animator FornostMain = null;
+	static Animator FornostWing11l = null;
+	static Animator FornostWing11r = null;
+	static Animator FornostWing12l = null;
+	static Animator FornostWing12r = null;
+	static Animator FornostWing21l = null;
+	static Animator FornostWing21r = null;
+	static Animator FornostWing22l = null;
+	static Animator FornostWing22r = null;
+	
 
 	@Override
 	public void onEnable() {
@@ -37,7 +51,7 @@ public class MCMEAnimations extends JavaPlugin {
 		HelmsDeep = new Animator(this, 0, 6, 10, 100, 13037, 36, -9978, 4, 9, 9, 1, 0, 0, 0);
 		HelmsDeepPalast = new Animator(this, 1, 5, 10, 50, 13105, 56, -9976, 3, 6, 5, 1, 0, 0, 0);
 		Edoras = new Animator(this, 2, 7, 10, 50, 13093, 29, -12214, 4, 6, 7, 1, 0, 0, 0);
-		Bridge = new Animator(this, 3, 11, 20, 500, 13729, 18, -16174, 10, 8, 16, 2, 13731, 23, -16147);
+		Bridge = new Animator(this, 3, 11, 50, 500, 13729, 18, -16174, 10, 8, 16, 2, 13731, 23, -16147);
 		BreeWest = new Animator(this, 4, 4, 10, 50, 178, 68, -873, 3, 7, 1, 1, 0, 0, 0);
 		BreeSouth = new Animator(this, 4, 4, 10, 50, 513, 68, -1351, 3, 7, 1, 1, 0, 0, 0);
 		BreeNorth = new Animator(this, 5, 4, 10, 50, 23, 68, -989, 1, 7, 3, 1, 0, 0, 0);
@@ -52,11 +66,24 @@ public class MCMEAnimations extends JavaPlugin {
 		Bagshot2 = new Animator(this, 10, 3, 10, 50, -155, 77, 1864, 3, 2, 4, 1, 0, 0, 0);
 		Bagshot3 = new Animator(this, 10, 3, 10, 50, -159, 78, 1879, 3, 2, 4, 1, 0, 0, 0);
 		Meduseld = new Animator(this, 11, 7, 10, 50, 13267, 80, -12114, 11, 6, 4, 1, 0, 0, 0);
+		LondDaer = new Animator(this, 12, 5, 10, 50, 8238, 49, 548, 1, 17, 7, 1, 0, 0, 0);
+		Orthanc = new Animator(this, 13, 11, 20, 100, 9624, 61, -9034, 5, 4, 5, 3, 10, 0, 0);
+		BreeWindmill1 = new Animator(this, 14, 8, 10, 1, 336, 75, -931, 11, 11, 1, 2, 345, 77, -922);
+		BreeWindmill2 = new Animator(this, 14, 8, 10, 1, 465, 76, -1065, 11, 11, 1, 2, 474, 78, -1056);
+		FornostMain = new Animator(this, 15, 6, 10, 50, -4194, 23, -799, 1, 14, 9, 1, 0, 0, 0);
+		FornostWing11l = new Animator(this, 16, 4, 10, 50, -4238, 31, -745, 5, 9, 1, 1, 0, 0, 0);
+		FornostWing12l = new Animator(this, 16, 4, 10, 50, -4100, 23, -677, 5, 9, 1, 1, 0, 0, 0);
+		FornostWing11r = new Animator(this, 16, 4, 10, 50, -4238, 31, -845, 5, 9, 1, 1, 0, 0, 0);
+		FornostWing12r = new Animator(this, 16, 4, 10, 50, -4100, 23, -913, 5, 9, 1, 1, 0, 0, 0);
+		FornostWing21r = new Animator(this, 17, 5, 10, 50, -4189, 23, -970, 1, 10, 5, 1, 0, 0, 0);
+		FornostWing21l = new Animator(this, 17, 5, 10, 50, -4189, 23, -624, 1, 10, 5, 1, 0, 0, 0);
+		FornostWing22r = new Animator(this, 17, 5, 10, 50, -4280, 31, -894, 1, 10, 5, 1, 0, 0, 0);
+		FornostWing22l = new Animator(this, 17, 5, 10, 50, -4280, 31, -702, 1, 10, 5, 1, 0, 0, 0);
 	}
 	
 	class Animator{
 		Plugin plugin;
-		int delay = 0;
+		int delay;
 		int originX;
 		int originY;
 		int originZ;
@@ -72,6 +99,7 @@ public class MCMEAnimations extends JavaPlugin {
 		int name;
 		int pausedelay;
 		Block tester;
+		int rc;
 		
 		public Animator(MCMEAnimations instance, int fname, int frames, int defaultdelay, int maxdelay, int ox, int oy, int oz, int lx, int ly, int lz, int TriggerType, int TriggerX, int TriggerY, int TriggerZ) {
 	        plugin = instance;
@@ -106,12 +134,25 @@ public class MCMEAnimations extends JavaPlugin {
 				}, delay);	
 			}
 			else{
-				plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin,new Runnable() {
-					@Override
-					public void run() {
-						previousFrame(allFrames);
+				if(pausedelay == 1){
+					if(rc < 5){
+						rc++;
+						nextFrame(1);
 					}
-				}, pausedelay);	
+					else{
+						rc = 0;
+						render(1);
+						tester.setTypeId(0);
+					}
+				}
+				else{
+					plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin,new Runnable() {
+						@Override
+						public void run() {
+							previousFrame(allFrames);
+						}
+					}, pausedelay);
+				}
 			}
 		}
 		
@@ -243,28 +284,53 @@ public class MCMEAnimations extends JavaPlugin {
 			nextFrame(1);
 	    }
 	    
-	    public boolean check(Location checker){
-	    	boolean ping = false;
-			if(tester.getTypeId() == 0){
-		    	if(tt == 1){
-					if(	checker.getBlockX() >= originX && checker.getBlockX() < (originX + lenX) && checker.getBlockY() >= originY && checker.getBlockY() < (originY + lenY) && checker.getBlockZ() >= originZ && checker.getBlockZ() < (originZ + lenZ)){
-						this.trigger();
-						ping = true;
+	    public void check(Location checker){
+		    if(tt == 1){
+				if(tester.getTypeId() == 0){
+					if(checker.getBlockX() >= originX){
+						if(checker.getBlockX() < (originX + lenX)){
+							if(checker.getBlockY() >= originY){
+								if(checker.getBlockY() < (originY + lenY)){
+									if(checker.getBlockZ() >= originZ){
+										if(checker.getBlockZ() < (originZ + lenZ)){
+											this.trigger();
+										}
+									}
+								}
+							}
+						}
 					}
+				}
+		    }
+		    else if(tt == 2){
+		    	if(tester.getTypeId() == 0){
+		    		if(checker.getBlock().getType().toString() == "LEVER"){
+		    			if(checker.getBlockX() == tx){
+		    				if(checker.getBlockY() == ty){
+		    					if(checker.getBlockZ() == tz){
+		    			    		this.trigger();
+			    				}
+			    			}
+			    		}
+			    	}
 		    	}
-		    	else if(tt == 2){
-		    		if(checker.getBlock().getType().toString() == "LEVER" && checker.getBlockX() == tx && checker.getBlockY() == ty && checker.getBlockZ() == tz){
-		    			this.trigger();
-		    			ping = true;
-		    		}
-		    	}
-		    	else if(tt == 3){
-		        	if(originX - tx < checker.getX() && checker.getX() < originX + tx && originZ - tx < checker.getZ() && checker.getZ() < originZ + tx){
-			    		this.trigger();
-			    		ping = true;
-		        	}
-		    	}
-			}
+		    }
+		}
+	    
+	    public boolean checkchat(Location checker){
+	    	boolean ping = false;
+		    if(tester.getTypeId() == 0){
+		    	if(originX - tx < checker.getX()){
+		    		if(checker.getX() < originX + tx){
+		    			if(originZ - tx < checker.getZ()){
+		    				if(checker.getZ() < originZ + tx){
+		    			    	this.trigger();
+		    			    	ping = true;
+			    			}
+			    		}
+			    	}
+			    }
+		    }
 			return ping;
 	    }
 	}

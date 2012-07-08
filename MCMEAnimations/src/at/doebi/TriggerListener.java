@@ -33,6 +33,18 @@ public class TriggerListener implements Listener {
 			MCMEAnimations.Bagshot2.check(c);
 			MCMEAnimations.Bagshot3.check(c);
 			MCMEAnimations.Meduseld.check(c);
+			MCMEAnimations.LondDaer.check(c);
+			MCMEAnimations.BreeWindmill1.check(c);
+			MCMEAnimations.BreeWindmill2.check(c);
+			MCMEAnimations.FornostMain.check(c);
+			MCMEAnimations.FornostWing11l.check(c);
+			MCMEAnimations.FornostWing11r.check(c);
+			MCMEAnimations.FornostWing12l.check(c);
+			MCMEAnimations.FornostWing12r.check(c);
+			MCMEAnimations.FornostWing21l.check(c);
+			MCMEAnimations.FornostWing21r.check(c);
+			MCMEAnimations.FornostWing22l.check(c);
+			MCMEAnimations.FornostWing22r.check(c);
 		}
 	}
 	
@@ -40,7 +52,13 @@ public class TriggerListener implements Listener {
 	public void onPlayerChat(final PlayerChatEvent event) {
 		if(event.getMessage().toLowerCase().indexOf("mellon") != -1){
 			Location c = event.getPlayer().getLocation();
-			if(MCMEAnimations.Moria.check(c) == true){
+			if(MCMEAnimations.Moria.checkchat(c) == true){
+				event.setCancelled(true);
+			}
+		}
+		if(event.getMessage().toLowerCase().indexOf("curumo") != -1){
+			Location c = event.getPlayer().getLocation();
+			if(MCMEAnimations.Orthanc.checkchat(c) == true){
 				event.setCancelled(true);
 			}
 		}
