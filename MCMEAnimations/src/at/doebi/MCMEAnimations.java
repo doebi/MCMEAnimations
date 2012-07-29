@@ -25,15 +25,12 @@ public class MCMEAnimations extends JavaPlugin {
 	static Animator GateBridgeVillage2 = null;
 	static Animator Bagend1 = null;
 	static Animator Bagend2 = null;
-	static Animator Bagshot1 = null;
-	static Animator Bagshot2 = null;
-	static Animator Bagshot3 = null;
 	static Animator Meduseld = null;
 	static Animator LondDaer = null;
 	static Animator Orthanc = null;
 	static Animator BreeWindmill1 = null;
 	static Animator BreeWindmill2 = null;
-	static Animator FornostMain = null;
+	/*static Animator FornostMain = null;
 	static Animator FornostWing11l = null;
 	static Animator FornostWing11r = null;
 	static Animator FornostWing12l = null;
@@ -41,7 +38,7 @@ public class MCMEAnimations extends JavaPlugin {
 	static Animator FornostWing21l = null;
 	static Animator FornostWing21r = null;
 	static Animator FornostWing22l = null;
-	static Animator FornostWing22r = null;
+	static Animator FornostWing22r = null;*/
 	
 
 	@Override
@@ -55,22 +52,19 @@ public class MCMEAnimations extends JavaPlugin {
 		BreeWest = new Animator(this, 4, 4, 10, 50, 178, 68, -873, 3, 7, 1, 1, 0, 0, 0);
 		BreeSouth = new Animator(this, 4, 4, 10, 50, 513, 68, -1351, 3, 7, 1, 1, 0, 0, 0);
 		BreeNorth = new Animator(this, 5, 4, 10, 50, 23, 68, -989, 1, 7, 3, 1, 0, 0, 0);
-		Moria = new Animator(this, 6, 8, 10, 50, 4282, 87, -6961, 4, 6, 3, 3, 20, 0, 0);
+		Moria = new Animator(this, 6, 6, 20, 100, 4280, 87, -6959, 8, 4, 3, 3, 20, 0, 0);
 		Isengard1 = new Animator(this, 7, 5, 10, 50, 9824, 11, -9058, 1, 13, 17, 1, 0, 0, 0);
 		Isengard2 = new Animator(this, 7, 5, 10, 50, 9801, 11, -9058, 1, 13, 17, 1, 0, 0, 0);
 		GateBridgeVillage1 = new Animator(this, 8, 4, 10, 50, 13693, 18, -16181, 1, 8, 4, 1, 0, 0, 0);
 		GateBridgeVillage2 = new Animator(this, 9, 4, 10, 50, 13716, 18, -16225, 5, 9, 1, 1, 0, 0, 0);
-		Bagend1 = new Animator(this, 10, 3, 10, 50, -175, 86, 1827, 3, 2, 4, 1, 0, 0, 0);
-		Bagend2 = new Animator(this, 10, 3, 10, 50, -175, 86, 1879, 3, 2, 4, 1, 0, 0, 0);
-		Bagshot1 = new Animator(this, 10, 3, 10, 50, -152, 78, 1838, 3, 2, 4, 1, 0, 0, 0);
-		Bagshot2 = new Animator(this, 10, 3, 10, 50, -155, 77, 1864, 3, 2, 4, 1, 0, 0, 0);
-		Bagshot3 = new Animator(this, 10, 3, 10, 50, -159, 78, 1879, 3, 2, 4, 1, 0, 0, 0);
+		Bagend1 = new Animator(this, 10, 3, 10, 50, -181, 99, 1830, 3, 2, 4, 1, 0, 0, 0);
+		Bagend2 = new Animator(this, 10, 3, 10, 50, -187, 99, 1884, 3, 2, 4, 1, 0, 0, 0);
 		Meduseld = new Animator(this, 11, 7, 10, 50, 13267, 80, -12114, 11, 6, 4, 1, 0, 0, 0);
 		LondDaer = new Animator(this, 12, 5, 10, 50, 8238, 49, 548, 1, 17, 7, 1, 0, 0, 0);
 		Orthanc = new Animator(this, 13, 11, 20, 100, 9624, 61, -9034, 5, 4, 5, 3, 10, 0, 0);
 		BreeWindmill1 = new Animator(this, 14, 8, 10, 1, 336, 75, -931, 11, 11, 1, 2, 345, 77, -922);
 		BreeWindmill2 = new Animator(this, 14, 8, 10, 1, 465, 76, -1065, 11, 11, 1, 2, 474, 78, -1056);
-		FornostMain = new Animator(this, 15, 6, 10, 50, -4194, 23, -799, 1, 14, 9, 1, 0, 0, 0);
+		/*FornostMain = new Animator(this, 15, 6, 10, 50, -4194, 23, -799, 1, 14, 9, 1, 0, 0, 0);
 		FornostWing11l = new Animator(this, 16, 4, 10, 50, -4238, 31, -745, 5, 9, 1, 1, 0, 0, 0);
 		FornostWing12l = new Animator(this, 16, 4, 10, 50, -4100, 23, -677, 5, 9, 1, 1, 0, 0, 0);
 		FornostWing11r = new Animator(this, 16, 4, 10, 50, -4238, 31, -845, 5, 9, 1, 1, 0, 0, 0);
@@ -78,7 +72,7 @@ public class MCMEAnimations extends JavaPlugin {
 		FornostWing21r = new Animator(this, 17, 5, 10, 50, -4189, 23, -970, 1, 10, 5, 1, 0, 0, 0);
 		FornostWing21l = new Animator(this, 17, 5, 10, 50, -4189, 23, -624, 1, 10, 5, 1, 0, 0, 0);
 		FornostWing22r = new Animator(this, 17, 5, 10, 50, -4280, 31, -894, 1, 10, 5, 1, 0, 0, 0);
-		FornostWing22l = new Animator(this, 17, 5, 10, 50, -4280, 31, -702, 1, 10, 5, 1, 0, 0, 0);
+		FornostWing22l = new Animator(this, 17, 5, 10, 50, -4280, 31, -702, 1, 10, 5, 1, 0, 0, 0);*/
 	}
 	
 	class Animator{
@@ -100,6 +94,7 @@ public class MCMEAnimations extends JavaPlugin {
 		int pausedelay;
 		Block tester;
 		int rc;
+		int state = 0;
 		
 		public Animator(MCMEAnimations instance, int fname, int frames, int defaultdelay, int maxdelay, int ox, int oy, int oz, int lx, int ly, int lz, int TriggerType, int TriggerX, int TriggerY, int TriggerZ) {
 	        plugin = instance;
@@ -134,6 +129,7 @@ public class MCMEAnimations extends JavaPlugin {
 				}, delay);	
 			}
 			else{
+				//Repeat if Windmill
 				if(pausedelay == 1){
 					if(rc < 5){
 						rc++;
@@ -146,12 +142,18 @@ public class MCMEAnimations extends JavaPlugin {
 					}
 				}
 				else{
-					plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin,new Runnable() {
-						@Override
-						public void run() {
-							previousFrame(allFrames);
-						}
-					}, pausedelay);
+					//Stop Bridge from closing
+					if(name == 3){
+						state = 1;
+						tester.setTypeId(0);
+					}else{
+						plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin,new Runnable() {
+							@Override
+							public void run() {
+								previousFrame(allFrames);
+							}
+						}, pausedelay);
+					}
 				}
 			}
 		}
@@ -230,6 +232,7 @@ public class MCMEAnimations extends JavaPlugin {
 				}, delay);			
 			}
 			else{
+				state = 0;
 				tester.setTypeId(0);
 			}
 		}
@@ -263,6 +266,10 @@ public class MCMEAnimations extends JavaPlugin {
 					this.renderWeights(i);
 				}
 			}
+			//Custom Code for Moria Paintings
+			if(name == 6){
+				
+			}
 	    }
 	    
 	    public String[] getInfo(String i) throws IOException {
@@ -281,7 +288,15 @@ public class MCMEAnimations extends JavaPlugin {
 
 		public void trigger(){
 			tester.setTypeId(1);
-			nextFrame(1);
+			if(name == 3){
+				if(state == 0){
+					nextFrame(1);
+				}else if(state == 1){
+					previousFrame(allFrames);
+				}
+			}else{
+				nextFrame(1);
+			}
 	    }
 	    
 	    public void check(Location checker){
