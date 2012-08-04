@@ -5,19 +5,20 @@ import java.io.FileReader;
 import java.io.IOException;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class MCMEAnimations extends JavaPlugin {
 	
-	String[] Animators = {"HelmsDeep", "HelmsDeepPalast", "Edoras", "Bridge", "BreeWestSouth", "BreeNorth", "Moria", "Isengard", "GateBridgeVillage1", "GateBridgeVillage2", "Bagend", "Meduseld", "LondDaer", "Orthanc", "BreeWindmill", "FornostMain", "FornostWing1", "FornostWing2"};
+	String[] Animators = {"HelmsDeep", "HelmsDeepPalast", "Edoras", "Bridge", "BreeWestSouth", "BreeNorth", "Moria", "Isengard", "GateBridgeVillage1", "GateBridgeVillage2", "Bagend", "Meduseld", "LondDaer", "Orthanc", "BreeWindmill", "Maggot", "Ferry"};
 	static Animator HelmsDeep = null;
 	static Animator HelmsDeepPalast = null;
 	static Animator Edoras = null;
 	static Animator Bridge = null;
-	static Animator BreeWest = null;
+	/*static Animator BreeWest = null;
 	static Animator BreeSouth = null;
-	static Animator BreeNorth = null;
+	static Animator BreeNorth = null;*/
 	static Animator Moria = null;
 	static Animator Isengard1 = null;
 	static Animator Isengard2 = null;
@@ -28,8 +29,10 @@ public class MCMEAnimations extends JavaPlugin {
 	static Animator Meduseld = null;
 	static Animator LondDaer = null;
 	static Animator Orthanc = null;
-	static Animator BreeWindmill1 = null;
-	static Animator BreeWindmill2 = null;
+	/*static Animator BreeWindmill1 = null;
+	static Animator BreeWindmill2 = null;*/
+	static Animator Maggot = null;
+	static Animator Ferry = null;
 	/*static Animator FornostMain = null;
 	static Animator FornostWing11l = null;
 	static Animator FornostWing11r = null;
@@ -48,10 +51,10 @@ public class MCMEAnimations extends JavaPlugin {
 		HelmsDeep = new Animator(this, 0, 6, 10, 100, 13037, 36, -9978, 4, 9, 9, 1, 0, 0, 0);
 		HelmsDeepPalast = new Animator(this, 1, 5, 10, 50, 13105, 56, -9976, 3, 6, 5, 1, 0, 0, 0);
 		Edoras = new Animator(this, 2, 7, 10, 50, 13093, 29, -12214, 4, 6, 7, 1, 0, 0, 0);
-		Bridge = new Animator(this, 3, 11, 50, 500, 13729, 18, -16174, 10, 8, 16, 2, 13731, 23, -16147);
-		BreeWest = new Animator(this, 4, 4, 10, 50, 178, 68, -873, 3, 7, 1, 1, 0, 0, 0);
+		Bridge = new Animator(this, 3, 11, 50, 0, 13729, 18, -16174, 10, 8, 16, 2, 13731, 23, -16147);
+		/*BreeWest = new Animator(this, 4, 4, 10, 50, 178, 68, -873, 3, 7, 1, 1, 0, 0, 0);
 		BreeSouth = new Animator(this, 4, 4, 10, 50, 513, 68, -1351, 3, 7, 1, 1, 0, 0, 0);
-		BreeNorth = new Animator(this, 5, 4, 10, 50, 23, 68, -989, 1, 7, 3, 1, 0, 0, 0);
+		BreeNorth = new Animator(this, 5, 4, 10, 50, 23, 68, -989, 1, 7, 3, 1, 0, 0, 0);*/
 		Moria = new Animator(this, 6, 6, 20, 100, 4280, 87, -6959, 8, 4, 3, 3, 20, 0, 0);
 		Isengard1 = new Animator(this, 7, 5, 10, 50, 9824, 11, -9058, 1, 13, 17, 1, 0, 0, 0);
 		Isengard2 = new Animator(this, 7, 5, 10, 50, 9801, 11, -9058, 1, 13, 17, 1, 0, 0, 0);
@@ -62,8 +65,10 @@ public class MCMEAnimations extends JavaPlugin {
 		Meduseld = new Animator(this, 11, 7, 10, 50, 13267, 80, -12114, 11, 6, 4, 1, 0, 0, 0);
 		LondDaer = new Animator(this, 12, 5, 10, 50, 8238, 49, 548, 1, 17, 7, 1, 0, 0, 0);
 		Orthanc = new Animator(this, 13, 11, 20, 100, 9624, 61, -9034, 5, 4, 5, 3, 10, 0, 0);
-		BreeWindmill1 = new Animator(this, 14, 8, 10, 1, 336, 75, -931, 11, 11, 1, 2, 345, 77, -922);
-		BreeWindmill2 = new Animator(this, 14, 8, 10, 1, 465, 76, -1065, 11, 11, 1, 2, 474, 78, -1056);
+		/*BreeWindmill1 = new Animator(this, 14, 8, 10, 1, 336, 75, -931, 11, 11, 1, 2, 345, 77, -922);
+		BreeWindmill2 = new Animator(this, 14, 8, 10, 1, 465, 76, -1065, 11, 11, 1, 2, 474, 78, -1056);*/
+		Maggot = new Animator(this, 15, 3, 10, 50, 1140, 78, -8, 2, 5, 4, 1, 0, 0, 0);
+		Ferry = new Animator(this, 16, 19, 25, 0, 1047, 66, -203, 5, 2, 24, 1, 0, 0, 0);
 		/*FornostMain = new Animator(this, 15, 6, 10, 50, -4194, 23, -799, 1, 14, 9, 1, 0, 0, 0);
 		FornostWing11l = new Animator(this, 16, 4, 10, 50, -4238, 31, -745, 5, 9, 1, 1, 0, 0, 0);
 		FornostWing12l = new Animator(this, 16, 4, 10, 50, -4100, 23, -677, 5, 9, 1, 1, 0, 0, 0);
@@ -119,6 +124,10 @@ public class MCMEAnimations extends JavaPlugin {
 		
 		public void nextFrame(int i){
 			this.render(i);
+			//Custom Code for Ferry, Move Player
+			if(name == 16){
+				movePlayer(3);
+			}
 			if(i < allFrames){
 				final int ni = i+1;
 				plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin,new Runnable() {
@@ -142,8 +151,8 @@ public class MCMEAnimations extends JavaPlugin {
 					}
 				}
 				else{
-					//Stop Bridge from closing
-					if(name == 3){
+					//Stop from closing, if only trigger
+					if(pausedelay == 0){
 						state = 1;
 						tester.setTypeId(0);
 					}else{
@@ -156,6 +165,21 @@ public class MCMEAnimations extends JavaPlugin {
 					}
 				}
 			}
+		}
+		
+		private void movePlayer(int dir){
+	        for (Player player : getServer().getOnlinePlayers()) {
+	            if (player.getLocation().getX() <= 1051 && player.getLocation().getX() >= 1047 && player.getLocation().getY() <= 69 && player.getLocation().getY() >= 67 && player.getLocation().getZ() <= -178 && player.getLocation().getZ() >= -202) {
+	            	Location loc = player.getLocation();
+		    		if(dir == 3){
+    					loc.add(0, 0, -1);
+    				}
+		    		if(dir == 4){
+    					loc.add(0, 0, 1);
+	    			}
+	    			player.teleport(loc);
+	            }
+	        }
 		}
 		
 		private void renderWeights(int i) {
@@ -222,6 +246,10 @@ public class MCMEAnimations extends JavaPlugin {
 
 		public void previousFrame(int i){
 			this.render(i);
+			//Custom Code for Ferry, Move Player
+			if(name == 16){
+				movePlayer(4);
+			}
 			if(i > 1){
 				final int ni = i-1;
 				plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin,new Runnable() {
@@ -288,7 +316,7 @@ public class MCMEAnimations extends JavaPlugin {
 
 		public void trigger(){
 			tester.setTypeId(1);
-			if(name == 3){
+			if(pausedelay == 0){
 				if(state == 0){
 					nextFrame(1);
 				}else if(state == 1){

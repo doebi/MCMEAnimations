@@ -21,9 +21,9 @@ public class TriggerListener implements Listener {
 			MCMEAnimations.HelmsDeepPalast.check(c);
 			MCMEAnimations.Edoras.check(c);
 			MCMEAnimations.Bridge.check(c);
-			MCMEAnimations.BreeWest.check(c);
+			/*MCMEAnimations.BreeWest.check(c);
 			MCMEAnimations.BreeSouth.check(c);
-			MCMEAnimations.BreeNorth.check(c);
+			MCMEAnimations.BreeNorth.check(c);*/
 			MCMEAnimations.Isengard1.check(c);
 			MCMEAnimations.Isengard2.check(c);
 			MCMEAnimations.GateBridgeVillage1.check(c);
@@ -32,8 +32,10 @@ public class TriggerListener implements Listener {
 			MCMEAnimations.Bagend2.check(c);
 			MCMEAnimations.Meduseld.check(c);
 			MCMEAnimations.LondDaer.check(c);
-			MCMEAnimations.BreeWindmill1.check(c);
-			MCMEAnimations.BreeWindmill2.check(c);
+			/*MCMEAnimations.BreeWindmill1.check(c);
+			MCMEAnimations.BreeWindmill2.check(c);*/
+			MCMEAnimations.Maggot.check(c);
+			MCMEAnimations.Ferry.check(c);
 		}
 	}
 	
