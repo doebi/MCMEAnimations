@@ -11,14 +11,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class MCMEAnimations extends JavaPlugin {
 	
-	String[] Animators = {"HelmsDeep", "HelmsDeepPalast", "Edoras", "Bridge", "BreeWestSouth", "BreeNorth", "Moria", "Isengard", "GateBridgeVillage1", "GateBridgeVillage2", "Bagend", "Meduseld", "LondDaer", "Orthanc", "BreeWindmill", "Maggot", "Ferry"};
+	String[] Animators = {"HelmsDeep", "HelmsDeepPalast", "Edoras", "Bridge", "BreeWest", "BreeNorth", "Moria", "Isengard", "GateBridgeVillage1", "GateBridgeVillage2", "Bagend", "Meduseld", "LondDaer", "Orthanc", "BreeSouth", "Maggot", "Ferry", "BreeJail"};
 	static Animator HelmsDeep = null;
 	static Animator HelmsDeepPalast = null;
 	static Animator Edoras = null;
 	static Animator Bridge = null;
-	/*static Animator BreeWest = null;
+	static Animator BreeWest = null;
 	static Animator BreeSouth = null;
-	static Animator BreeNorth = null;*/
+	static Animator BreeNorth = null;
 	static Animator Moria = null;
 	static Animator Isengard1 = null;
 	static Animator Isengard2 = null;
@@ -29,19 +29,9 @@ public class MCMEAnimations extends JavaPlugin {
 	static Animator Meduseld = null;
 	static Animator LondDaer = null;
 	static Animator Orthanc = null;
-	/*static Animator BreeWindmill1 = null;
-	static Animator BreeWindmill2 = null;*/
 	static Animator Maggot = null;
 	static Animator Ferry = null;
-	/*static Animator FornostMain = null;
-	static Animator FornostWing11l = null;
-	static Animator FornostWing11r = null;
-	static Animator FornostWing12l = null;
-	static Animator FornostWing12r = null;
-	static Animator FornostWing21l = null;
-	static Animator FornostWing21r = null;
-	static Animator FornostWing22l = null;
-	static Animator FornostWing22r = null;*/
+	static Animator BreeJail = null;
 	
 
 	@Override
@@ -52,32 +42,22 @@ public class MCMEAnimations extends JavaPlugin {
 		HelmsDeepPalast = new Animator(this, 1, 5, 10, 50, 13105, 56, -9976, 3, 6, 5, 1, 0, 0, 0);
 		Edoras = new Animator(this, 2, 7, 10, 50, 13093, 29, -12214, 4, 6, 7, 1, 0, 0, 0);
 		Bridge = new Animator(this, 3, 11, 50, 0, 13729, 18, -16174, 10, 8, 16, 2, 13731, 23, -16147);
-		/*BreeWest = new Animator(this, 4, 4, 10, 50, 178, 68, -873, 3, 7, 1, 1, 0, 0, 0);
-		BreeSouth = new Animator(this, 4, 4, 10, 50, 513, 68, -1351, 3, 7, 1, 1, 0, 0, 0);
-		BreeNorth = new Animator(this, 5, 4, 10, 50, 23, 68, -989, 1, 7, 3, 1, 0, 0, 0);*/
+		BreeWest = new Animator(this, 4, 7, 15, 100, 167, 69, -893, 8, 4, 4, 1, 0, 0, 0);
+		BreeSouth = new Animator(this, 14, 7, 10, 50, 492, 68, -1351, 4, 4, 8, 1, 0, 0, 0);
+		BreeNorth = new Animator(this, 5, 7, 10, 50, 46, 68, -991, 4, 4, 8, 1, 0, 0, 0);
 		Moria = new Animator(this, 6, 6, 20, 100, 4280, 87, -6959, 8, 4, 3, 3, 20, 0, 0);
 		Isengard1 = new Animator(this, 7, 5, 10, 50, 9824, 11, -9058, 1, 13, 17, 1, 0, 0, 0);
 		Isengard2 = new Animator(this, 7, 5, 10, 50, 9801, 11, -9058, 1, 13, 17, 1, 0, 0, 0);
 		GateBridgeVillage1 = new Animator(this, 8, 4, 10, 50, 13693, 18, -16181, 1, 8, 4, 1, 0, 0, 0);
 		GateBridgeVillage2 = new Animator(this, 9, 4, 10, 50, 13716, 18, -16225, 5, 9, 1, 1, 0, 0, 0);
-		Bagend1 = new Animator(this, 10, 3, 10, 50, -181, 99, 1830, 3, 2, 4, 1, 0, 0, 0);
-		Bagend2 = new Animator(this, 10, 3, 10, 50, -187, 99, 1884, 3, 2, 4, 1, 0, 0, 0);
+		Bagend1 = new Animator(this, 10, 3, 10, 0, -181, 99, 1830, 3, 2, 4, 1, 0, 0, 0);
+		Bagend2 = new Animator(this, 10, 3, 10, 0, -187, 99, 1884, 3, 2, 4, 1, 0, 0, 0);
 		Meduseld = new Animator(this, 11, 7, 10, 50, 13267, 80, -12114, 11, 6, 4, 1, 0, 0, 0);
 		LondDaer = new Animator(this, 12, 5, 10, 50, 8238, 49, 548, 1, 17, 7, 1, 0, 0, 0);
 		Orthanc = new Animator(this, 13, 11, 20, 100, 9624, 61, -9034, 5, 4, 5, 3, 10, 0, 0);
-		/*BreeWindmill1 = new Animator(this, 14, 8, 10, 1, 336, 75, -931, 11, 11, 1, 2, 345, 77, -922);
-		BreeWindmill2 = new Animator(this, 14, 8, 10, 1, 465, 76, -1065, 11, 11, 1, 2, 474, 78, -1056);*/
 		Maggot = new Animator(this, 15, 3, 10, 50, 1140, 78, -8, 2, 5, 4, 1, 0, 0, 0);
 		Ferry = new Animator(this, 16, 19, 25, 0, 1047, 66, -203, 5, 2, 24, 1, 0, 0, 0);
-		/*FornostMain = new Animator(this, 15, 6, 10, 50, -4194, 23, -799, 1, 14, 9, 1, 0, 0, 0);
-		FornostWing11l = new Animator(this, 16, 4, 10, 50, -4238, 31, -745, 5, 9, 1, 1, 0, 0, 0);
-		FornostWing12l = new Animator(this, 16, 4, 10, 50, -4100, 23, -677, 5, 9, 1, 1, 0, 0, 0);
-		FornostWing11r = new Animator(this, 16, 4, 10, 50, -4238, 31, -845, 5, 9, 1, 1, 0, 0, 0);
-		FornostWing12r = new Animator(this, 16, 4, 10, 50, -4100, 23, -913, 5, 9, 1, 1, 0, 0, 0);
-		FornostWing21r = new Animator(this, 17, 5, 10, 50, -4189, 23, -970, 1, 10, 5, 1, 0, 0, 0);
-		FornostWing21l = new Animator(this, 17, 5, 10, 50, -4189, 23, -624, 1, 10, 5, 1, 0, 0, 0);
-		FornostWing22r = new Animator(this, 17, 5, 10, 50, -4280, 31, -894, 1, 10, 5, 1, 0, 0, 0);
-		FornostWing22l = new Animator(this, 17, 5, 10, 50, -4280, 31, -702, 1, 10, 5, 1, 0, 0, 0);*/
+		BreeJail = new Animator(this, 17, 7, 5, 50, 491, 71, -1180, 4, 3, 4, 1, 0, 0, 0);
 	}
 	
 	class Animator{
@@ -283,7 +263,7 @@ public class MCMEAnimations extends JavaPlugin {
 		  				String vi [] = Info[j].split(":");
 			  			Block = Integer.parseInt(vi[0]);
 			  			DataValue = Byte.parseByte(vi[1]);
-		  				target.setTypeIdAndData(Block, DataValue, true);
+		  				target.setTypeIdAndData(Block, DataValue, false);
 		  				j++;
 		  			}
 	  			}

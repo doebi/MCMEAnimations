@@ -21,9 +21,9 @@ public class TriggerListener implements Listener {
 			MCMEAnimations.HelmsDeepPalast.check(c);
 			MCMEAnimations.Edoras.check(c);
 			MCMEAnimations.Bridge.check(c);
-			/*MCMEAnimations.BreeWest.check(c);
+			MCMEAnimations.BreeWest.check(c);
 			MCMEAnimations.BreeSouth.check(c);
-			MCMEAnimations.BreeNorth.check(c);*/
+			MCMEAnimations.BreeNorth.check(c);
 			MCMEAnimations.Isengard1.check(c);
 			MCMEAnimations.Isengard2.check(c);
 			MCMEAnimations.GateBridgeVillage1.check(c);
@@ -32,10 +32,9 @@ public class TriggerListener implements Listener {
 			MCMEAnimations.Bagend2.check(c);
 			MCMEAnimations.Meduseld.check(c);
 			MCMEAnimations.LondDaer.check(c);
-			/*MCMEAnimations.BreeWindmill1.check(c);
-			MCMEAnimations.BreeWindmill2.check(c);*/
 			MCMEAnimations.Maggot.check(c);
 			MCMEAnimations.Ferry.check(c);
+			MCMEAnimations.BreeJail.check(c);
 		}
 	}
 	
@@ -54,7 +53,7 @@ public class TriggerListener implements Listener {
 			}
 		}
 	}
-	//Experimantal Code for Moria Gate with Painting
+	//Experimental Code for Moria Gate with Painting
 	/*
 	@EventHandler(priority = EventPriority.HIGH)
 	public void onPaintingBreak(final PaintingBreakEvent event) {
